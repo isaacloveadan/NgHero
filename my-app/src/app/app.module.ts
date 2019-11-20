@@ -18,6 +18,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   // 组件要先在这里声明
+  // 声明属于本NgModule的组件、指令、管道
   declarations: [
     AppComponent,
     HeroesComponent,
@@ -26,6 +27,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     DashboardComponent,
     HeroSearchComponent,
   ],
+  // exports（导出表）：能在其他模块的组件模板中使用的可声明对象的子集
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,7 +39,9 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
+  // 向全局服务中贡献的那些服务的创建器
   providers: [],
+  // 应用的主视图 称为根组件 只有根模块才会设置这个bootstrap树形
   bootstrap: [AppComponent]
 })
 export class AppModule { }
