@@ -1,0 +1,15 @@
+<div id="search-component">
+  <h4>
+    <label for="search-box">Hero Search</label>
+  </h4>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)">
+  <ul class="search-result">
+<!--  heroes$中的$表示是一个observable而不是数组  -->
+<!--  *ngFor不能直接使用observable 不过后面跟上 | async 会自动订阅到observable 就不用在组件类中订阅了  -->
+    <li *ngFor="let hero of heroes$ | async">
+      <a routerLink="/detail/{{ hero.id }}">
+        {{ hero.name }}
+      </a>
+    </li>
+  </ul>
+</div>
