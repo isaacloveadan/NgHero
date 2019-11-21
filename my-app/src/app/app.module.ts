@@ -15,6 +15,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
 
 @NgModule({
   // 组件要先在这里声明
@@ -26,6 +27,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
+    NgswitchComponent,
   ],
   // exports（导出表）：能在其他模块的组件模板中使用的可声明对象的子集
   imports: [
