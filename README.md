@@ -113,3 +113,31 @@ NgSwitch 实际上包括三个相互协作的指令：NgSwitch、NgSwitchCase �
 // 当 currentHero 为空时，保护视图渲染器，让它免于失败
 The current hero's name is {{currentHero?.name}}
 ```
+
+## 生命周期
+1.ngOnInit()是组件获取初始数据的好地方
+
+2.ngOnDestroy()一些清理逻辑必须在 Angular 销毁指令之前运行，把它们放在 ngOnDestroy() 中
+
+3.ngOnChanges(changes: SimpleChanges)一旦检测到该组件(或指令)的输入属性发生了变化,ngOnChanges() 方法获取了一个对象，它把每个发生变化的属性名都映射到了一个SimpleChange对象
+
+## 通过setter截听@Input属性值的变化
+```angularjs
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-name-child',
+  template: '<h3>"{{name}}"</h3>'
+})
+export class NameChildComponent {
+  private _name = '';
+
+  // 通过设置@Input属性的set get对数据进行处理
+  @Input()
+  set name(name: string) {
+    this._name = (name && name.trim()) || '<no name set>';
+  }
+
+  get name(): string { return this._name; }
+}
+```
