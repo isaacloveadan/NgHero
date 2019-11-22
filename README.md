@@ -29,6 +29,13 @@ ng generate module app-routing --flat --module=app
 --flat 把这个文件放进了 src/app 中，而不是单独的目录中。
 --module=app 告诉 CLI 把它注册到 AppModule 的 imports 数组中。
 
+## FIFTH
+生成指令
+指令和组件一样需要在AppModule中声明
+```shell script
+ng generate directive highlight
+```
+
 ## class
 ```angular2html
 // badCurly有值后会替换原来class

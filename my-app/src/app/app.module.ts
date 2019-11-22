@@ -16,6 +16,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { HighlightComponent } from './highlight/highlight.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   // 组件要先在这里声明
@@ -28,6 +30,8 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
     DashboardComponent,
     HeroSearchComponent,
     NgswitchComponent,
+    HighlightComponent,
+    HighlightDirective,
   ],
   // exports（导出表）：能在其他模块的组件模板中使用的可声明对象的子集
   imports: [

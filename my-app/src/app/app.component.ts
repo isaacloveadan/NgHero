@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
   * `
   * */
   templateUrl: './app.component.html',
+  // 也可以写style字符串模板
+  // styles: ['h1 { font-weight: normal; }']
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {

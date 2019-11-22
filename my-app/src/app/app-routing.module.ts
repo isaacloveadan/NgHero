@@ -5,6 +5,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 import { NgswitchComponent } from "./ngswitch/ngswitch.component";
+import { HighlightComponent } from "./highlight/highlight.component";
 
 
 const routes: Routes = [{
@@ -24,6 +25,9 @@ const routes: Routes = [{
 }, {
   path: 'ngswitch',
   component: NgswitchComponent
+}, {
+  path: 'highlight',
+  component: HighlightComponent
 }];
 
 @NgModule({
